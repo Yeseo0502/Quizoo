@@ -4,6 +4,8 @@ import Header from "../components/Header";
 import animals from "../data/animals";
 import "./QuizPage.css";
 
+// /quiz경로 페이지
+
 function shuffle(arr) {
   return [...arr].sort(() => Math.random() - 0.5);
 }

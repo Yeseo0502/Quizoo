@@ -1,5 +1,7 @@
 import { useLocation, useNavigate } from "react-router-dom";
+import "./QuizResultPage.css";
 
+//게임 결과 페이지 /quiz/result
 function QuizResultPage() {
   const navigate = useNavigate();
   const { state } = useLocation();
@@ -10,38 +12,24 @@ function QuizResultPage() {
   const rate = Math.round((correct / total) * 100);
 
   return (
-    <div style={{ padding: "40px", maxWidth: "600px", margin: "0 auto" }}>
+    <div className="result-container">
       <h2>퀴즈 결과</h2>
-      <p style={{ fontSize: "24px", fontWeight: "bold" }}>
-        {correct} / {total} 정답  ({rate}%)
-      </p>
+      <p className="result-score">{correct} / {total} 정답 ({rate}%)</p>
 
-      <h3 style={{ marginTop: "30px" }}>❌ 틀린 문제</h3>
+      <h3 className="result-wrong-title">❌ 틀린 문제</h3>
       {results.filter(r => !r.isCorrect).map((r, i) => (
-        <div key={i} style={{ display: "flex", alignItems: "center",
-                              gap: "12px", marginBottom: "12px" }}>
-          <img src={r.animal.image} alt={r.animal.name}
-               style={{ width: "60px", height: "60px",
-                        objectFit: "cover", borderRadius: "8px" }} />
+        <div key={i} className="result-wrong-item">
+          <img className="result-wrong-img" src={r.animal.image} alt={r.animal.name} />
           <div>
             <p>정답: <strong>{r.animal.name}</strong></p>
-            <p style={{ color: "#999" }}>내 답: {r.userAnswer || "(미입력)"}</p>
+            <p className="result-user-answer">내 답: {r.userAnswer || "(미입력)"}</p>
           </div>
         </div>
       ))}
 
-      <div style={{ display: "flex", gap: "16px", marginTop: "30px" }}>
-        <button onClick={() => navigate("/quiz")}
-                style={{ padding: "12px 24px", background: "#4caf50",
-                         color: "white", border: "none",
-                         borderRadius: "8px", cursor: "pointer" }}>
-          다시 시작
-        </button>
-        <button onClick={() => navigate("/")}
-                style={{ padding: "12px 24px", background: "#eee",
-                         border: "none", borderRadius: "8px", cursor: "pointer" }}>
-          메인으로
-        </button>
+      <div className="result-buttons">
+        <button className="result-btn-retry" onClick={() => navigate("/quiz")}>다시 시작</button>
+        <button className="result-btn-home" onClick={() => navigate("/")}>메인으로</button>
       </div>
     </div>
   );

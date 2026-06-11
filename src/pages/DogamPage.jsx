@@ -4,6 +4,8 @@ import AnimalCard from "../components/AnimalCard";
 import animals from "../data/animals";
 import "./DogamPage.css";
 
+//동물 도감페이지 /dogam
+
 function DogamPage() {
   const [search, setSearch] = useState("");
 
