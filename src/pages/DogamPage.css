@@ -1,0 +1,20 @@
+.dogam-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dogam-search {
+  margin-right: 24px;
+  padding: 8px 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  width: 200px;
+}
+
+.dogam-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  padding: 24px;
+}
