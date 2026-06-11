@@ -1,0 +1,9 @@
+.header {
+  padding: 16px 24px;
+  cursor: pointer;
+}
+
+.header-logo {
+  font-size: 28px;
+  font-weight: bold;
+}

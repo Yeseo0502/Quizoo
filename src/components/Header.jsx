@@ -1,12 +1,12 @@
 import { useNavigate } from "react-router-dom";
-
+import "./Header.css";
+//로고 누르면 HOME 경로로 이동.
 function Header() {
   const navigate = useNavigate();
 
   return (
-    <div style={{ padding: "16px 24px", cursor: "pointer" }}
-         onClick={() => navigate("/")}>
-      <h1 style={{ fontSize: "28px", fontWeight: "bold" }}>Quizoo</h1>
+    <div className="header" onClick={() => navigate("/")}>
+      <h1 className="header-logo">Quizoo</h1>
     </div>
   );
 }
