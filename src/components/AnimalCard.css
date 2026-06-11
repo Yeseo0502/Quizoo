@@ -1,0 +1,22 @@
+.animal-card {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  width: 160px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.animal-card-img {
+  width: 100%;
+  height: 130px;
+  object-fit: cover;
+}
+
+.animal-card-info {
+  padding: 8px;
+}
+
+.animal-card-name {
+  font-weight: bold;
+}
