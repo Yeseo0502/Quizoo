@@ -15,6 +15,7 @@
 
 .animal-card-info {
   padding: 8px;
+  border-top: 1px solid #ddd;
 }
 
 .animal-card-name {

@@ -1,0 +1,51 @@
+.detail-container {
+  padding: 40px;
+}
+
+.detail-back-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 24px;
+  color: #333;
+}
+
+.detail-content {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+.detail-img {
+  width: 360px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+
+.detail-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detail-name {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.detail-desc1 {
+  color: #666;
+  font-size: 14px;
+}
+
+.detail-desc2 {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.detail-zoo {
+  font-size: 15px;
+  color: #444;
+}

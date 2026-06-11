@@ -12,7 +12,7 @@ function MainPage() {
         {/* 퀴즈 버튼 */}
         <div className="main-card" onClick={() => navigate("/quiz")}>
           <div className="main-card-image">
-            <p>시험지 이미지</p>
+            <p>시험지</p>
           </div>
           <p className="main-card-label">퀴즈</p>
         </div>
