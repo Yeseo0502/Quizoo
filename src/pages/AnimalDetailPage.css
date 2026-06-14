@@ -1,5 +1,5 @@
 .detail-container {
-  padding: 40px;
+  padding: 40px 0;
 }
 
 .detail-back-btn {
@@ -7,7 +7,8 @@
   border: none;
   font-size: 16px;
   cursor: pointer;
-  margin-bottom: 24px;
+  margin-bottom: 35px;
+  margin-left: -1000px;
   color: #333;
 }
 
@@ -22,6 +23,7 @@
   height: 300px;
   object-fit: cover;
   border-radius: 16px;
+  margin-left: 65px;
 }
 
 .detail-info {
@@ -47,5 +49,15 @@
 
 .detail-zoo {
   font-size: 15px;
-  color: #444;
+  color: #959595;
+}
+.detail-zoo a {
+  display: block;
+  color: #4a90e2;
+  text-decoration: none;
+  margin-top: 8px;
+}
+
+.detail-zoo a:hover {
+  text-decoration: underline;
 }

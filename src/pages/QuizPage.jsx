@@ -42,11 +42,15 @@ function QuizPage() {
     <div>
       <div className="quiz-top-bar">
         <Header />
-        <button className="quiz-exit-btn" onClick={handleExit}>✕</button>
+        <button className="quiz-exit-btn" onClick={handleExit}>
+          ✕
+        </button>
       </div>
 
       <div className="quiz-content">
-        <p className="quiz-progress">{current + 1} / {questions.length}</p>
+        <p className="quiz-progress">
+          {current + 1} / {questions.length}
+        </p>
 
         <img className="quiz-image" src={animal.image} alt="?" />
 
@@ -56,15 +60,23 @@ function QuizPage() {
             type="text"
             placeholder="동물 이름을 입력하세요"
             value={input}
-            onChange={e => setInput(e.target.value)}
-            onKeyDown={e => e.key === "Enter" && handleSubmit()}
+            onChange={(e) => setInput(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && handleSubmit()}
           />
-          <button className="quiz-submit-btn" onClick={handleSubmit}>완료</button>
+          <button className="quiz-submit-btn" onClick={handleSubmit}>
+            완료
+          </button>
         </div>
 
-        <button className="quiz-reset-btn"
-                onClick={() => { setCurrent(0); setResults([]); setInput(""); }}>
-          한 번 처음으로 되돌리기
+        <button
+          className="quiz-reset-btn"
+          onClick={() => {
+            setCurrent(0);
+            setResults([]);
+            setInput("");
+          }}
+        >
+          ⟲처음부터 풀기
         </button>
       </div>
     </div>
